@@ -11,6 +11,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA87B246-7CA6-42D7-A00B-DE2259DD2B92}"
 	ProjectSection(SolutionItems) = preProject
 		js\animation.js = js\animation.js
+		js\keyboard.js = js\keyboard.js
+		js\line.js = js\line.js
+		js\main.js = js\main.js
+		js\math.js = js\math.js
+		js\node.js = js\node.js
+		js\point.js = js\point.js
+		js\selection.js = js\selection.js
+		js\test.js = js\test.js
 	EndProjectSection
 EndProject
 Global
