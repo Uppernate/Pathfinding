@@ -23,6 +23,14 @@ function newLine(point1, point2) {
 }
 
 function findLine(p1, p2) {
+    if (typeof p1 == "undefined") {
+        Error("findLine() was given no point1");
+        return;
+    }
+    if (typeof p2 == "undefined") {
+        Error("findLine() was given no point2");
+        return;
+    }
     for (i = 0; i < lines.length; i++) {
         if (lines[i].start === p1 && lines[i].end === p2) {
             return lines[i];
