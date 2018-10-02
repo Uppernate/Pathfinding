@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C935D53C-088B-4E52-BA4A-7CC95F8F7110}"
+	ProjectSection(SolutionItems) = preProject
+		page.html = page.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA87B246-7CA6-42D7-A00B-DE2259DD2B92}"
+	ProjectSection(SolutionItems) = preProject
+		js\animation.js = js\animation.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA87B246-7CA6-42D7-A00B-DE2259DD2B92} = {C935D53C-088B-4E52-BA4A-7CC95F8F7110}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5CAFB724-D212-46DC-918F-67A6C267068D}
+	EndGlobalSection
+EndGlobal
