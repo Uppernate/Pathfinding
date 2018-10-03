@@ -16,6 +16,9 @@ var points = [];
 var lines = [];
 var nodes = [];
 var selected = [];
+var action = {
+    name: "None",
+};
 
 // Main Drawing function
 
@@ -30,9 +33,18 @@ function render(list) {
 
 function update() {
     context.clearRect(0, 0, myCanvas.width, myCanvas.height);
+
+    if (typeof action.update != "undefined") {
+        action.update();
+    }
+
     render(nodes);
     render(lines);
     render(points);
+
+    context.font = "30px Arial";
+    context.fillText(String(mousePos.x) + ", " + String(mousePos.y), 10, 50);
+
 
     requestAnimationFrame(update);
 }

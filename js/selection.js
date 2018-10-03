@@ -13,17 +13,17 @@ function clearSelection() {
 }
 
 myCanvas.addEventListener("click", function (event) {
-    var pageX = event.pageX - 8;
-    var pageY = event.pageY - 8;
-    if (!keys[16] && !keys[17]) {
-        clearSelection();
-        var success = selectPoints(pageX, pageY);
-        if (!success) { success = selectLines(pageX, pageY); }
-        if (!success) { success = selectNodes(pageX, pageY); }
-    }
-    else if (keys[16] && !keys[17]) {
-        var success = selectPoints(pageX, pageY);
-        if (!success) { success = selectLines(pageX, pageY); }
-        if (!success) { success = selectNodes(pageX, pageY); }
+    if (action.name == "None") {
+        if (!keyHold(16) && !keyHold(17)) {
+            clearSelection();
+            var success = selectPoints(mousePos.x, mousePos.y);
+            if (!success) { success = selectLines(mousePos.x, mousePos.y); }
+            if (!success) { success = selectNodes(mousePos.x, mousePos.y); }
+        }
+        else if (keyHold(16) && !keyHold(17)) {
+            var success = selectPoints(mousePos.x, mousePos.y);
+            if (!success) { success = selectLines(mousePos.x, mousePos.y); }
+            if (!success) { success = selectNodes(mousePos.x, mousePos.y); }
+        }
     }
 })

@@ -20,6 +20,15 @@ function newPoint(x, y) {
     return point;
 }
 
+function findPoint(list, p) {
+    for (var i = 0; i < list.length; i++) {
+        if (list[i] == p) {
+            return 
+        } 
+    }
+    list.push(p);
+}
+
 // Selection
 
 function selectPoints(x, y) {

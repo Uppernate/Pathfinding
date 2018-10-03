@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C935D53C-088B-4E52-BA4A-7CC95F8F7110}"
 	ProjectSection(SolutionItems) = preProject
-		page.html = page.html
+		index.html = index.html
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA87B246-7CA6-42D7-A00B-DE2259DD2B92}"
@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{FA87B246-7CA6-
 		js\line.js = js\line.js
 		js\main.js = js\main.js
 		js\math.js = js\math.js
+		js\mouse.js = js\mouse.js
+		js\move.js = js\move.js
 		js\node.js = js\node.js
 		js\point.js = js\point.js
 		js\selection.js = js\selection.js

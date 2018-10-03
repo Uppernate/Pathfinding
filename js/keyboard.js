@@ -2,25 +2,38 @@
 
 var keys = [];
 
-function defaultKeyDownFunction() {
+function defaultKeyFunction() {
     return 
 }
 
-document.addEventListener("keydown", function (e) {
-    if (typeof keys[e.keyCode] != "undefined") {
-        keys[e.keyCode] = {
-            state: false,
-            pastState: false,
-            execute: defaultKeyDownFunction
-        }
+function newBind(d, u) {
+    return {
+        state: false,
+        pastState: false,
+        down: d,
+        up: u
     }
-    keys[e.keyCode] = true;
+}
+
+function keyHold(num) {
+    if (typeof keys[num] == "undefined") { keys[num] = newBind(defaultKeyFunction, defaultKeyFunction); }
+    return keys[num].state;
+}
+
+document.addEventListener("keydown", function (e) {
+    if (typeof keys[e.keyCode] == "undefined") { keys[e.keyCode] = newBind(defaultKeyFunction, defaultKeyFunction); }
+    keys[e.keyCode].state = true;
     if (keys[e.keyCode].state && !keys[e.keyCode].pastState) {
-    keys[e.keyCode].pastState = true;
-        keys[e.keyCode].execute();
+        keys[e.keyCode].pastState = true;
+        keys[e.keyCode].down();
     }
 })
 
 document.addEventListener("keyup", function (e) {
-    keys[e.keyCode] = false;
+    if (typeof keys[e.keyCode] == "undefined") { keys[e.keyCode] = newBind(defaultKeyFunction, defaultKeyFunction); }
+    keys[e.keyCode].state = false;
+    if (!keys[e.keyCode].state && keys[e.keyCode].pastState) {
+        keys[e.keyCode].pastState = false;
+        keys[e.keyCode].up();
+    }
 })

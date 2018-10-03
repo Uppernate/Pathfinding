@@ -2,8 +2,8 @@
 
 function drawNode(node) {
     context.beginPath();
-    if (node.selected) { context.fillStyle = "#A0A2BF"; }
-    else { context.fillStyle = "#41447E"; }
+    if (node.selected) { context.fillStyle = "#A0A2BF4A"; }
+    else { context.fillStyle = "#41447E4A"; }
     for (p = 0; p < node.points.length; p++) {
         context.lineTo(node.points[p].x, node.points[p].y);
     }
