@@ -56,7 +56,6 @@ keys[46] = newBind(
 
             console.log("Deletion done.");
             action = { name: "None" };
-            console.log(nodes);
         }
     },
     function () {
