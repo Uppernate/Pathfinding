@@ -25,7 +25,12 @@ var action = {
 function render(list) {
     for (i = 0; i < list.length; i++) {
         var obj = list[i];
-        obj.draw(obj);
+        if (typeof obj == "undefined") {
+            
+        }
+        else {
+            obj.draw(obj);
+        }
     }
 }
 

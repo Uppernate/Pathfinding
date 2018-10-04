@@ -42,6 +42,19 @@ function findLine(p1, p2) {
     return newLine(p1, p2);
 }
 
+function findLineWithPoint(p) {
+    var foundLines = [];
+    foreach(lines, function (line) {
+        if (line.start === p1) {
+            foundLines.push(line);
+        }
+        if (line.end === p1) {
+            foundLines.push(line);
+        }
+    });
+    return foundLines;
+}
+
 // Selection
 
 function selectLines(x, y) {

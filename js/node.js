@@ -11,6 +11,8 @@ function drawNode(node) {
     context.fill();
 }
 
+// Creation
+
 function recursiveNodeResolvePoint(node, current, c) {
     if (!c[0]) return;
     if (typeof c[0].x != "undefined") {
@@ -73,6 +75,38 @@ function newNode(c1, c2, c3, c4) {
     node.lines.push(findLine(node.lines[node.lines.length - 1].end, node.lines[0].start));
     nodes.push(node);
     return node;
+}
+
+// Returning nodes with element inside
+
+function findNodeWithPoint(p) {
+    var foundNodes = [];
+    foreach(nodes, function (node) {
+        var f = foreach(node.points, function (point) {
+            if (point === p) {
+                return true;
+            }
+        });
+        if (f != null) {
+            foundNodes.push(node);
+        }
+    });
+    return foundNodes;
+}
+
+function findNodeWithLine(p) {
+    var foundNodes = [];
+    foreach(nodes, function (node) {
+        var f = foreach(node.lines, function (line) {
+            if (line === p) {
+                return true;
+            }
+        });
+        if (f != null) {
+            foundNodes.push(node);
+        }
+    });
+    return foundNodes;
 }
 
 // Selection
