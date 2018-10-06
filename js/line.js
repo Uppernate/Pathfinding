@@ -45,10 +45,10 @@ function findLine(p1, p2) {
 function findLineWithPoint(p) {
     var foundLines = [];
     foreach(lines, function (line) {
-        if (line.start === p1) {
+        if (line.start === p) {
             foundLines.push(line);
         }
-        if (line.end === p1) {
+        if (line.end === p) {
             foundLines.push(line);
         }
     });

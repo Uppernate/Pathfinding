@@ -36,11 +36,6 @@ keys[46] = newBind(
                 }
             });
 
-            console.log("Deleting: ");
-            console.log("Points:", action.points);
-            console.log("Lines:", action.lines);
-            console.log("Nodes:", action.nodes);
-
             // Deletion 
             foreach(action.points, function (point) {
                 removeObject(points, point);
@@ -54,7 +49,6 @@ keys[46] = newBind(
                 removeObject(nodes, node);
             });
 
-            console.log("Deletion done.");
             action = { name: "None" };
         }
     },

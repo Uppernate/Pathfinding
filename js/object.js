@@ -10,7 +10,6 @@ function findObjectInArray(list, p) {
 
 function removeObject(list, p) {
     var i = list.indexOf(p);
-    console.log("Removing item ", p);
     list.splice(i, 1);
     list.sort();
 }
